@@ -159,8 +159,8 @@ var context:NSManagedObjectContext!
             print("Number of items in database: \(results.count)")
             
             for x in results {
-                 print("Customer Name :  \(x.name!)")
-                print("Customer Id : \(x.id!)")
+                print("Customer Name :  \(x.name ?? "default")")
+                print("Customer Id : \(x.id ?? "default")")
                
                 print("Balance $\(x.balance)")
                  print("--------------------------------")
