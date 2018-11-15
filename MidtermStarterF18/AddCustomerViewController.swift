@@ -74,8 +74,7 @@ class AddCustomerViewController: UIViewController {
             // (Send the INSERT to the database)
             try self.context.save()
             print("data saved")
-            
-            messageLabel.text = "Account Created Successfully"
+            messageLabel.text = "Account Created Successfully \n Your Customer Id is : \(id)"
             
         }
         

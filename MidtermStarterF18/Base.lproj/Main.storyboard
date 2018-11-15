@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="duw-KI-HMZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q3R-3f-VQy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--Menu Table View Controller-->
+        <!--Bank App-->
         <scene sceneID="Eqe-T3-IcE">
             <objects>
                 <tableViewController id="duw-KI-HMZ" customClass="MenuTableViewController" customModule="MidtermStarterF18" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,11 +94,11 @@
                             <outlet property="delegate" destination="duw-KI-HMZ" id="T8S-Lj-bHc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="CqP-vq-LNN"/>
+                    <navigationItem key="navigationItem" title="Bank App" id="CqP-vq-LNN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pdc-SN-sQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="-191"/>
+            <point key="canvasLocation" x="2648.8000000000002" y="-191.1544227886057"/>
         </scene>
         <!--Add Customer View Controller-->
         <scene sceneID="cmB-qO-b95">
@@ -119,13 +119,6 @@
                                 <rect key="frame" x="62" y="214" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5n-Yq-6KN">
-                                <rect key="frame" x="74" y="40" width="247" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -151,10 +144,17 @@
                                     <action selector="createAccountPressed:" destination="OHc-fJ-KRO" eventType="touchUpInside" id="Ex3-wZ-jPr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[put messages here]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-Bd-Fm2">
-                                <rect key="frame" x="26" y="421" width="322" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[put messages here]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-Bd-Fm2">
+                                <rect key="frame" x="-16" y="421" width="364" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5n-Yq-6KN">
+                                <rect key="frame" x="64" y="77" width="247" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr6-AS-2gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3712.8000000000002" y="-283.80809595202402"/>
+            <point key="canvasLocation" x="4652" y="-283.80809595202402"/>
         </scene>
         <!--Deposit View Controller-->
         <scene sceneID="EC1-IJ-H4I">
@@ -233,10 +233,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[put messages here]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ0-tN-JUr">
-                                <rect key="frame" x="16" y="517" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[put messages here]" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ0-tN-JUr">
+                                <rect key="frame" x="16" y="484" width="343" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -267,6 +267,7 @@
         <!--Navigation Controller-->
         <scene sceneID="kqo-qh-YfA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOo-9P-PjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wsb-e1-SPE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9v0-RS-8fD">
@@ -274,11 +275,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="duw-KI-HMZ" kind="relationship" relationship="rootViewController" id="IaQ-I1-6Xr"/>
-                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MOo-9P-PjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="-222"/>
         </scene>
@@ -303,6 +300,7 @@
         <!--Navigation Controller-->
         <scene sceneID="JT8-bJ-y3L">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AO-Gw-BVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kuv-ON-Zhk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mb-Ry-AfW">
@@ -311,9 +309,26 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4AO-Gw-BVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773.5999999999999" y="-283.80809595202402"/>
+            <point key="canvasLocation" x="3712.8000000000002" y="-283.80809595202402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TBl-Yx-krL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q3R-3f-VQy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqo-UE-TL4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="duw-KI-HMZ" kind="relationship" relationship="rootViewController" id="jrC-7Z-gS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zz0-bF-pcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709.5999999999999" y="-191.1544227886057"/>
         </scene>
     </scenes>
 </document>
