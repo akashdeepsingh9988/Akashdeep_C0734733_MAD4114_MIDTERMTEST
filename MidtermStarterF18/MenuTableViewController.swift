@@ -9,6 +9,8 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    
+    var menu = ["Add Customer" , "Make Deposit"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +31,28 @@ class MenuTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return menu.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = menu[indexPath.row]
 
         return cell
     }
-    */
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +89,21 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // Get the index path from the cell that was tapped
+        let indexPath = tableView.indexPathForSelectedRow
+        // Get the Row of the Index Path and set as index
+        let index = indexPath?.row
+        // Get in touch with the DetailViewController
+        let customerController = segue.destination as! AddCustomerViewController
+        // Pass on the data to the Detail ViewController by setting it's indexPathRow value
+        customerController.index = index!
     }
-    */
+ 
 
 }

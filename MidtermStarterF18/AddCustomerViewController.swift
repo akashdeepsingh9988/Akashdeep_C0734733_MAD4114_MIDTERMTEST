@@ -7,20 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCustomerViewController: UIViewController {
-
+ var context:NSManagedObjectContext!
+    var index = 0
     // MARK: Outlets
     // ---------------------
     @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var startingBalanceTextBox: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    var id = ""
+    var name = ""
+    var balance  = 0.0
     
     // MARK: Default Functions
     // ---------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+     
+        self.context = appDelegate.persistentContainer.viewContext
 
+        print("index = ", index)
+        
+        
         
         // HINT HINT HINT HINT HINT
         // HINT HINT HINT HINT HINT
@@ -32,6 +44,7 @@ class AddCustomerViewController: UIViewController {
         } while x.count < 4
         
         print("Random value: \(x)")
+        id = x
         
         
     }
@@ -46,6 +59,35 @@ class AddCustomerViewController: UIViewController {
     
     @IBAction func createAccountPressed(_ sender: Any) {
         print("you pressed the create account button!")
+        name  = nameTextBox.text!
+        balance = Double(startingBalanceTextBox.text!)!
+        
+        let p = Customer(context: self.context)
+        p.id  = id
+        p.name = name
+        p.balance  = balance
+        
+        do {
+            // Save the user to the database
+            // (Send the INSERT to the database)
+            try self.context.save()
+            print("data saved")
+            
+            messageLabel.text = "Account Created Successfully"
+            
+        }
+        
+        catch {
+            print("Error while saving to database")
+            messageLabel.text = "Please try again later"
+        }
+            
+
+        
+      //  message = "";
+        
+        
+        
     }
     
     
