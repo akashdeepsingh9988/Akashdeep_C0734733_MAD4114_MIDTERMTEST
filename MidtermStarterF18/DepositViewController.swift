@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class DepositViewController: UIViewController {
-
+    var index = 0;
+var context:NSManagedObjectContext!
     // MARK: Outlets
     // ---------------------
     @IBOutlet weak var customerIdTextBox: UITextField!
@@ -17,11 +19,15 @@ class DepositViewController: UIViewController {
 
     @IBOutlet weak var depositAmountTextBox: UITextField!
     @IBOutlet weak var messagesLabel: UILabel!
+    var custid = ""
     
     // MARK: Default Functions
     // ---------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        self.context = appDelegate.persistentContainer.viewContext
 
         print("You are on the Check Balance screen!")
     }
@@ -38,6 +44,36 @@ class DepositViewController: UIViewController {
     
     @IBAction func checkBalancePressed(_ sender: Any) {
         print("check balance button pressed!")
+         custid =  customerIdTextBox.text!
+       
+        let fetchRequest:NSFetchRequest<Customer> = Customer.fetchRequest()
+        fetchRequest.predicate =  NSPredicate(format: "id == %@", custid)
+        
+        do {
+            
+            let results = try self.context.fetch(fetchRequest) as [Customer]
+            
+            // Loop through the database results and output each "row" to the screen
+            print("Number of items in database: \(results.count)")
+            
+            if (results.count == 1) {
+                // editScreen.person = results[0] as P
+                
+                for x in results {
+                    
+                    print("Balance \(x.balance)")
+                    balanceLabel.text = String(x.balance)
+                }
+                
+            }
+            
+        }
+        catch {
+            print("Error when fetching from database")
+        }
+        
+        
+        
     }
     
     

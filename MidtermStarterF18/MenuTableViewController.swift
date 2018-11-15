@@ -99,10 +99,21 @@ class MenuTableViewController: UITableViewController {
         let indexPath = tableView.indexPathForSelectedRow
         // Get the Row of the Index Path and set as index
         let index = indexPath?.row
-        // Get in touch with the DetailViewController
-        let customerController = segue.destination as! AddCustomerViewController
-        // Pass on the data to the Detail ViewController by setting it's indexPathRow value
-        customerController.index = index!
+        if (index  == 0)
+        {
+            // Get in touch with the DetailViewController
+            let customerController = segue.destination as! AddCustomerViewController
+            // Pass on the data to the Detail ViewController by setting it's indexPathRow value
+            customerController.index = index!
+
+        }
+        
+        else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "deposit")
+            self.present(controller, animated: true, completion: nil)
+        }
+    
     }
  
 

@@ -32,7 +32,9 @@ class AddCustomerViewController: UIViewController {
 
         print("index = ", index)
         
+    
         
+    
         
         // HINT HINT HINT HINT HINT
         // HINT HINT HINT HINT HINT

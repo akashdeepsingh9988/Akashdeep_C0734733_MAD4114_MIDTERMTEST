@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OHc-fJ-KRO" kind="show" id="u1K-kV-xKM"/>
+                                    <segue destination="OHc-fJ-KRO" kind="show" id="vC7-OZ-Zl7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -162,6 +162,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AKT-bu-40F"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vJc-ki-zQR"/>
                     <connections>
                         <outlet property="messageLabel" destination="g2h-Bd-Fm2" id="ZNE-Sk-alm"/>
                         <outlet property="nameTextBox" destination="Rrj-cz-Q5J" id="jbZ-Aq-lv9"/>
@@ -170,12 +171,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr6-AS-2gP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="-283"/>
+            <point key="canvasLocation" x="3712.8000000000002" y="-283.80809595202402"/>
         </scene>
         <!--Deposit View Controller-->
         <scene sceneID="EC1-IJ-H4I">
             <objects>
-                <viewController id="AwZ-za-cEv" customClass="DepositViewController" customModule="MidtermStarterF18" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="deposit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AwZ-za-cEv" customClass="DepositViewController" customModule="MidtermStarterF18" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQs-Yz-NXz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,6 +252,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WBC-hu-7Wn"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BeQ-OF-p55"/>
                     <connections>
                         <outlet property="balanceLabel" destination="Skk-1s-JFO" id="fjB-37-t0P"/>
                         <outlet property="customerIdTextBox" destination="WLd-Nh-2tJ" id="hlu-eH-Tec"/>
@@ -260,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TlA-Kd-qLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="517"/>
+            <point key="canvasLocation" x="1964" y="516.79160419790105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kqo-qh-YfA">
@@ -279,6 +281,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOo-9P-PjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079" y="-222"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cve-Gt-UEQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efZ-J4-WJ9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nyc-PL-hnT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AwZ-za-cEv" kind="relationship" relationship="rootViewController" id="bfi-nG-CjI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXu-ro-Wf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.8" y="516.79160419790105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JT8-bJ-y3L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kuv-ON-Zhk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mb-Ry-AfW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AO-Gw-BVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2773.5999999999999" y="-283.80809595202402"/>
         </scene>
     </scenes>
 </document>
